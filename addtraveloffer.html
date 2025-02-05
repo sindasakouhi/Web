@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a Travel Offer</h1>
+    <form>
+        <br><br><label for="Title">Title:</label>
+        <input type="text" id="Title" name="Title" minlength="3" required title="Le titre de l'offre doit comporter au moins 3 caractères et décrire clairement l'offre"
+        placeholder="Enter a title...">
+        <br><br><label for="Destination">Destination:</label>
+        <input type="text" id="destination" name="destination" minlength="3"  pattern="[A-Za-z\s]+" title="La destination doit comporter au moins 3 caractères et ne contenir que des lettres et des espaces"
+        placeholder="Enter a destination...">
+        <br><br><label for="departureDate">Departure Date:</label>
+        <input type="date" id="DepartureDate" name="departureDate" required title="Veuillez sélectionner la date de départ de l'offre"
+        >
+        <br><br><label for="ReturnDate"> returnDate:</label>
+        <input type="date" id="returnDate" name="returnDate" required title="Veuillez sélectionner la date de retour de l'offre"
+        >
+        <br><br><label for="Title">Price:</label>
+        <input type="number" id="Price" name="Price" step="0.01" min="0" title="Le prix doit être un nombre entier ou décimal positif"
+        placeholder="Enter a price...">
+        <br><br><label for="availability">Availability:</label>
+        <input type="checkbox" id="availability" name="availability" title="Cochez la reponse">
+        <br><br><label for="category">Category:</label>
+        <select id="category" name="category" required title="Sélectionnez une catégorie parmi les options proposées"
+        >
+            <option value="Aventure">Adventure</option>
+            <option value="Plage">Plage</option>
+            <option value="Luxe">Luxury</option>
+            <option value="Culturelle">Culturel</option>
+            <option value="Nature">Nature</option>
+        </select>
+        <br><br><button type="submit">Add Offer</button>
+    </form>
+        <script src="validation.js"></script>
+        </body>
+</html>
