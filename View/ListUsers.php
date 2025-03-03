@@ -116,17 +116,18 @@ $users = $userController->getUsers();
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($users as $user): ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($user['email']); ?></td>
-                        <td><?php echo htmlspecialchars($user['pwd']); ?></td>
-                        <td>
-                            <a  class="btn btn-delete">Supprimer</a>
-                            <a  class="btn btn-update">Modifier</a>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
+    <?php foreach ($users as $user): ?>
+        <tr>
+            <td><?php echo htmlspecialchars($user['email']); ?></td>
+            <td><?php echo htmlspecialchars($user['pwd']); ?></td>
+            <td>
+                <a href="deleteuser.php?id=<?php echo $user['id']; ?>" class="btn btn-delete" onclick="return confirm('Voulez-vous vraiment supprimer cet utilisateur ?');">Supprimer</a>
+                <a href="updateuser.php?id=<?php echo $user['id']; ?>" class="btn btn-update">Modifier</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</tbody>
+
         </table>
     </div>
 </body>
